@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>web/layouts/head-css.html</url>
+            <bookmark id="1">
+                <name/>
+                <line>14</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/WebCuaHangDen/src/java/DAO/LoaiDenDAO.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/WebCuaHangDen/web/layouts/header_user.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/WebCuaHangDen/web/elements/UserProduct.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/WebCuaHangDen/web/elements/Cart.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/WebCuaHangDen/src/java/Controller/UserLoginServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/WebCuaHangDen/src/java/Model/LoaiDen.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/WebCuaHangDen/src/java/Controller/UserManagerServlet.java</file>
+        </group>
+    </open-files>
+</project-private>

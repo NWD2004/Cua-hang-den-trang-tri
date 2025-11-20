@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #4B70E2;
+}
+
+.main-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #4B70E2;
+}
+
+.header-icons a {
+  margin-left: 15px;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.header-icons a:hover {
+  color: #4B70E2;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(to right, #4B70E2, #2A3BBF);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-content span {
+  color: #ffe600;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  background: #fff;
+  color: #4B70E2;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #4B70E2;
+  color: #fff;
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #4B70E2;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+.site-footer strong {
+  color: #fff;
+}
+/* Cấu trúc tổng thể cho toàn trang */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nội dung chính (đẩy footer xuống) */
+main {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Auth Modal */
+.auth-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.auth-modal.open { display: flex; }
+.auth-dialog {
+  max-height: 90vh;
+  overflow: auto;
+  background: transparent;
+  border: 0;
+}

@@ -1,0 +1,119 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+}
+
+/* Phần hero trên cùng */
+.about-hero {
+    text-align: center;
+    padding: 80px 10%;
+    background: linear-gradient(to right, #fff8dc, #f6c90e30);
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.about-hero p {
+    color: #555;
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Phần nội dung chính */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10%;
+    gap: 40px;
+    background: #fff;
+}
+
+.about-image img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Phần giá trị */
+.about-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    background: #f7f7f7;
+    padding: 60px 10%;
+}
+
+.value-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 25px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.value-card i {
+    font-size: 2rem;
+    color: #f6c90e;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image, .about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        margin-top: 20px;
+    }
+}
