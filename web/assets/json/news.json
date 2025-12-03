@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "title": "Xu hướng ánh sáng 2025",
+    "subtitle": "Tổng hợp nghiên cứu vật liệu mới, case study dự án và mẹo phối ánh sáng giúp không gian sống giàu cảm xúc hơn.",
+    "tags": [
+      "Lighting Insight",
+      "Case Study",
+      "Interior Tips",
+      "Energy Saving"
+    ]
+  },
+  "featured": {
+    "title": "Bản đồ ánh sáng cho villa biển: tối ưu cảm giác nghỉ dưỡng với 4 lớp chiếu sáng",
+    "excerpt": "Đội LightStudio hoàn thiện trọn gói giải pháp cho The Coast Villa – từ bản vẽ MEP đến thi công hiện trường chỉ trong 21 ngày.",
+    "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
+    "author": "LightStore Studio",
+    "date": "18/11/2025",
+    "readingTime": "7 phút đọc",
+    "stats": {
+      "views": "18.4k",
+      "shares": "1.2k",
+      "bookmarks": "640"
+    }
+  },
+  "latest": [
+    {
+      "title": "Bí quyết chọn đèn dining zone giúp món ăn ngon mắt hơn 30%",
+      "excerpt": "Chuyên gia décor chia sẻ cách pha màu ánh sáng 3000K – 4000K để vừa ấm cúng vừa tôn màu thực phẩm.",
+      "image": "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80",
+      "date": "16/11/2025",
+      "views": "9.6k",
+      "category": "Phong cách sống",
+      "readingTime": "5 phút",
+      "badge": "Editor's pick"
+    },
+    {
+      "title": "So sánh 5 dòng đèn thông minh 2025 – HomeKit, Matter hay Zigbee?",
+      "excerpt": "Bảng benchmark thực tế từ 20 hộ gia đình sử dụng LightStore Smart trong 3 tháng.",
+      "image": "https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=800&q=80",
+      "date": "14/11/2025",
+      "views": "12.1k",
+      "category": "Công nghệ",
+      "readingTime": "8 phút",
+      "badge": "Trending"
+    },
+    {
+      "title": "Checklist ánh sáng cho phòng ngủ trẻ em – an toàn & giàu trí tưởng tượng",
+      "excerpt": "Từ cảm biến chuyển động đến đèn chiếu sao: những item được phụ huynh tin dùng tại LightStore.",
+      "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80",
+      "date": "12/11/2025",
+      "views": "7.4k",
+      "category": "Gia đình",
+      "readingTime": "6 phút",
+      "badge": "Guide"
+    }
+  ],
+  "categories": [
+    { "name": "Lighting Inspiration", "count": 24 },
+    { "name": "Dự án thực tế", "count": 12 },
+    { "name": "Đèn thông minh", "count": 15 },
+    { "name": "Vật liệu & hoàn thiện", "count": 9 },
+    { "name": "Ưu đãi hệ sinh thái", "count": 6 }
+  ],
+  "popular": [
+    {
+      "title": "Cập nhật 5 finish kim loại mới nhất cho đèn thả trần",
+      "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80",
+      "date": "05/11/2025",
+      "readingTime": "4 phút"
+    },
+    {
+      "title": "Case study: khách sạn Cala Luna nâng 45% điểm hài lòng nhờ light-scaping",
+      "image": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=600&q=80",
+      "date": "02/11/2025",
+      "readingTime": "6 phút"
+    },
+    {
+      "title": "Workshop phối ánh sáng & hương thơm dành cho homestay",
+      "image": "https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=600&q=80",
+      "date": "28/10/2025",
+      "readingTime": "3 phút"
+    }
+  ],
+  "insights": [
+    { "label": "Tỷ lệ đọc hết bài", "value": "63%", "trend": "up", "delta": "+4.3%" },
+    { "label": "Subscription mới", "value": "1.280", "trend": "up", "delta": "+12%" },
+    { "label": "Nguồn lưu lượng từ email", "value": "37%", "trend": "down", "delta": "-2%" },
+    { "label": "Thời gian đọc trung bình", "value": "4'32''", "trend": "up", "delta": "+18s" }
+  ]
+}
+

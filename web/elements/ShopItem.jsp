@@ -216,9 +216,9 @@
                             </td>
                             <td>
                                 <div class="action-buttons">
-                            <button class="btn-action btn-view" onclick="viewProduct(<%= den.getMaDen() %>)" title="Xem chi tiết sản phẩm">
+<!--                            <button class="btn-action btn-view" onclick="viewProduct(<%= den.getMaDen() %>)" title="Xem chi tiết sản phẩm">
                                         <i class="fas fa-eye"></i>
-                                    </button>
+                                    </button>-->
                             <button class="btn-action btn-edit" onclick="showEditModal(<%= den.getMaDen() %>)" title="Chỉnh sửa sản phẩm">
                                         <i class="fas fa-edit"></i>
                                     </button>

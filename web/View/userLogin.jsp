@@ -337,7 +337,7 @@
 
                 <div class="options">
                     <label><input type="checkbox" name="remember"> Ghi nhớ đăng nhập</label>
-                    <a href="#">Quên mật khẩu?</a>
+                    <a href="${pageContext.request.contextPath}/forgot-password">Quên mật khẩu?</a>
                 </div>
 
                 <button type="submit" class="btn-login">Đăng nhập</button>

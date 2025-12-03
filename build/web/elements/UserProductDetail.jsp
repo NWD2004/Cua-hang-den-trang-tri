@@ -12,6 +12,20 @@
     List<KichThuoc> sizes = (List<KichThuoc>) request.getAttribute("sizes");
     Map<Integer, Integer> variantStock = (Map<Integer, Integer>) request.getAttribute("variantStock");
     List<Den> relatedProducts = (List<Den>) request.getAttribute("relatedProducts");
+    List<DanhGia> reviews = (List<DanhGia>) request.getAttribute("reviews");
+    Double averageRating = (Double) request.getAttribute("averageRating");
+    
+    // Biến user đã được khai báo trong header_user.jsp
+    // Kiểm tra xem user đã đánh giá sản phẩm này chưa
+    boolean hasReviewed = false;
+    if (user != null && reviews != null) {
+        for (DanhGia review : reviews) {
+            if (review.getMaND() == user.getMaND()) {
+                hasReviewed = true;
+                break;
+            }
+        }
+    }
     
     NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
     if (product == null) {
@@ -23,6 +37,8 @@
     if (sizes == null) sizes = new ArrayList<>();
     if (variantStock == null) variantStock = new HashMap<>();
     if (relatedProducts == null) relatedProducts = new ArrayList<>();
+    if (reviews == null) reviews = new ArrayList<>();
+    if (averageRating == null) averageRating = 0.0;
     
     String imagePath = "assets/images/product/den_tran.png"; // Fallback mặc định
     String hinhAnh = product.getHinhAnh();
@@ -383,6 +399,258 @@
             margin-bottom: 15px;
         }
         
+        /* Reviews Section */
+        .reviews-summary {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .rating-overview {
+            text-align: center;
+        }
+        
+        .rating-score {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffd700;
+            line-height: 1;
+        }
+        
+        .rating-stars {
+            font-size: 24px;
+            color: #ffd700;
+            margin: 10px 0;
+        }
+        
+        .rating-count {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .review-form {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .review-form h3 {
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .star-rating {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        
+        .star-rating input {
+            display: none;
+        }
+        
+        .star-rating label {
+            font-size: 32px;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #ffd700;
+        }
+        
+        .review-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+        
+        .review-textarea:focus {
+            outline: none;
+            border-color: #ffd700;
+        }
+        
+        .review-submit-btn {
+            background: linear-gradient(135deg, #ffd700, #ffa500);
+            color: #1a1a1a;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .review-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+        }
+        
+        .review-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .review-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .review-user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd700, #ffa500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a1a;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .review-user-info h4 {
+            margin: 0;
+            color: #1a1a1a;
+            font-size: 16px;
+        }
+        
+        .review-date {
+            color: #999;
+            font-size: 13px;
+        }
+        
+        .review-stars {
+            color: #ffd700;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .review-content {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .review-actions {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-edit-review {
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .btn-edit-review:hover {
+            background: #e0e0e0;
+            border-color: #ffd700;
+        }
+        
+        .edit-review-form {
+            margin-top: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .edit-review-form .star-rating {
+            margin-bottom: 15px;
+        }
+        
+        .edit-review-form .review-textarea {
+            margin-bottom: 15px;
+        }
+        
+        .edit-review-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-save-review {
+            background: linear-gradient(135deg, #ffd700, #ffa500);
+            color: #1a1a1a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-save-review:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+        }
+        
+        .btn-cancel-review {
+            background: #fff;
+            border: 1px solid #ddd;
+            color: #666;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-cancel-review:hover {
+            background: #f0f0f0;
+        }
+        
+        .no-reviews {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+        }
+        
         /* Related Products */
         .related-products {
             margin-top: 40px;
@@ -649,7 +917,158 @@
             </div>
             
             <div class="tab-content" id="reviews">
-                <p>Chưa có đánh giá nào. Hãy là người đầu tiên đánh giá sản phẩm này!</p>
+                <% 
+                    String reviewSuccess = request.getParameter("reviewSuccess");
+                    String reviewUpdated = request.getParameter("reviewUpdated");
+                    if ("true".equals(reviewSuccess)) {
+                %>
+                <div class="alert-success">
+                    <i class="fas fa-check-circle"></i> Cảm ơn bạn đã đánh giá sản phẩm!
+                </div>
+                <% } %>
+                <% if ("true".equals(reviewUpdated)) { %>
+                <div class="alert-success">
+                    <i class="fas fa-check-circle"></i> Đã cập nhật đánh giá thành công!
+                </div>
+                <% } %>
+                
+                <!-- Reviews Summary -->
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="rating-score"><%= String.format("%.1f", averageRating) %></div>
+                        <div class="rating-stars">
+                            <% 
+                                int fullStars = (int) Math.floor(averageRating);
+                                boolean hasHalfStar = (averageRating - fullStars) >= 0.5;
+                                for (int i = 0; i < 5; i++) {
+                                    if (i < fullStars) {
+                            %>
+                            <i class="fas fa-star"></i>
+                            <% } else if (i == fullStars && hasHalfStar) { %>
+                            <i class="fas fa-star-half-alt"></i>
+                            <% } else { %>
+                            <i class="far fa-star"></i>
+                            <% } } %>
+                        </div>
+                        <div class="rating-count"><%= reviews.size() %> đánh giá</div>
+                    </div>
+                </div>
+                
+                <!-- Review Form -->
+                <% if (user != null && !hasReviewed) { %>
+                <div class="review-form">
+                    <h3>Viết đánh giá của bạn</h3>
+                    <form id="reviewForm" method="POST" action="${pageContext.request.contextPath}/add-review">
+                        <input type="hidden" name="maDen" value="<%= product.getMaDen() %>">
+                        
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="soSao" value="5" required>
+                            <label for="star5"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="soSao" value="4">
+                            <label for="star4"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="soSao" value="3">
+                            <label for="star3"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="soSao" value="2">
+                            <label for="star2"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="soSao" value="1">
+                            <label for="star1"><i class="fas fa-star"></i></label>
+                        </div>
+                        
+                        <textarea name="binhLuan" class="review-textarea" 
+                                  placeholder="Chia sẻ trải nghiệm của bạn về sản phẩm này..." 
+                                  required></textarea>
+                        
+                        <button type="submit" class="review-submit-btn">
+                            <i class="fas fa-paper-plane"></i> Gửi đánh giá
+                        </button>
+                    </form>
+                </div>
+                <% } else if (user == null) { %>
+                <div class="review-form" style="text-align: center; padding: 30px;">
+                    <p>Bạn cần <a href="${pageContext.request.contextPath}/View/userLogin.jsp" style="color: #ffd700; font-weight: 600;">đăng nhập</a> để đánh giá sản phẩm.</p>
+                </div>
+                <% } else if (hasReviewed) { %>
+                <div class="review-form" style="text-align: center; padding: 30px; background: #e8f5e9;">
+                    <p style="color: #2e7d32; margin: 0;"><i class="fas fa-check-circle"></i> Bạn đã đánh giá sản phẩm này rồi.</p>
+                </div>
+                <% } %>
+                
+                <!-- Reviews List -->
+                <div class="review-list">
+                    <% if (reviews.isEmpty()) { %>
+                    <div class="no-reviews">
+                        <i class="fas fa-comment-slash" style="font-size: 48px; margin-bottom: 15px; color: #ddd;"></i>
+                        <p>Chưa có đánh giá nào. Hãy là người đầu tiên đánh giá sản phẩm này!</p>
+                    </div>
+                    <% } else { 
+                        DAO.NguoiDungDAO userDAO = new DAO.NguoiDungDAO();
+                        for (DanhGia review : reviews) {
+                            NguoiDung reviewer = userDAO.getById(review.getMaND());
+                            String reviewerName = reviewer != null ? reviewer.getTenDangNhap() : "Người dùng";
+                            String reviewerInitial = reviewerName.substring(0, 1).toUpperCase();
+                            java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm");
+                            boolean isCurrentUserReview = (user != null && review.getMaND() == user.getMaND());
+                    %>
+                    <div class="review-item" id="review-<%= review.getMaDG() %>">
+                        <div class="review-header">
+                            <div class="review-user">
+                                <div class="review-avatar"><%= reviewerInitial %></div>
+                                <div class="review-user-info">
+                                    <h4><%= reviewerName %></h4>
+                                    <div class="review-date">
+                                        <%= review.getNgayDanhGia() != null ? dateFormat.format(java.sql.Timestamp.valueOf(review.getNgayDanhGia())) : "N/A" %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-stars" id="review-stars-<%= review.getMaDG() %>">
+                            <% for (int i = 0; i < 5; i++) { %>
+                            <i class="<%= i < review.getSoSao() ? "fas" : "far" %> fa-star"></i>
+                            <% } %>
+                        </div>
+                        <div class="review-content" id="review-content-<%= review.getMaDG() %>">
+                            <%= review.getBinhLuan() != null ? review.getBinhLuan().replace("\n", "<br>") : "" %>
+                        </div>
+                        <% if (isCurrentUserReview) { %>
+                        <div class="review-actions">
+                            <button class="btn-edit-review" onclick="showEditReviewForm(<%= review.getMaDG() %>, <%= review.getSoSao() %>, '<%= review.getBinhLuan() != null ? review.getBinhLuan().replace("'", "\\'").replace("\n", "\\n") : "" %>', <%= product.getMaDen() %>)">
+                                <i class="fas fa-edit"></i> Chỉnh sửa
+                            </button>
+                        </div>
+                        <div class="edit-review-form" id="edit-form-<%= review.getMaDG() %>" style="display: none;">
+                            <form method="POST" action="${pageContext.request.contextPath}/update-review">
+                                <input type="hidden" name="maDG" value="<%= review.getMaDG() %>">
+                                <input type="hidden" name="maDen" value="<%= product.getMaDen() %>">
+                                
+                                <div class="star-rating" id="edit-star-rating-<%= review.getMaDG() %>">
+                                    <input type="radio" id="edit-star5-<%= review.getMaDG() %>" name="soSao" value="5" required>
+                                    <label for="edit-star5-<%= review.getMaDG() %>"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="edit-star4-<%= review.getMaDG() %>" name="soSao" value="4">
+                                    <label for="edit-star4-<%= review.getMaDG() %>"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="edit-star3-<%= review.getMaDG() %>" name="soSao" value="3">
+                                    <label for="edit-star3-<%= review.getMaDG() %>"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="edit-star2-<%= review.getMaDG() %>" name="soSao" value="2">
+                                    <label for="edit-star2-<%= review.getMaDG() %>"><i class="fas fa-star"></i></label>
+                                    <input type="radio" id="edit-star1-<%= review.getMaDG() %>" name="soSao" value="1">
+                                    <label for="edit-star1-<%= review.getMaDG() %>"><i class="fas fa-star"></i></label>
+                                </div>
+                                
+                                <textarea name="binhLuan" class="review-textarea" id="edit-comment-<%= review.getMaDG() %>" required></textarea>
+                                
+                                <div class="edit-review-actions">
+                                    <button type="submit" class="btn-save-review">
+                                        <i class="fas fa-save"></i> Lưu thay đổi
+                                    </button>
+                                    <button type="button" class="btn-cancel-review" onclick="cancelEditReview(<%= review.getMaDG() %>)">
+                                        Hủy
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <% } %>
+                    </div>
+                    <% } } %>
+                </div>
             </div>
         </div>
         
@@ -797,6 +1216,26 @@
         
         function viewProduct(maDen) {
             window.location.href = '${pageContext.request.contextPath}/UserProductDetailServlet?id=' + maDen;
+        }
+        
+        function showEditReviewForm(maDG, soSao, binhLuan, maDen) {
+            const form = document.getElementById('edit-form-' + maDG);
+            const comment = document.getElementById('edit-comment-' + maDG);
+            
+            // Set giá trị
+            comment.value = binhLuan.replace(/\\n/g, '\n');
+            document.getElementById('edit-star' + soSao + '-' + maDG).checked = true;
+            
+            // Hiển thị form
+            form.style.display = 'block';
+            
+            // Scroll to form
+            form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        function cancelEditReview(maDG) {
+            const form = document.getElementById('edit-form-' + maDG);
+            form.style.display = 'none';
         }
         
         function addToCart() {

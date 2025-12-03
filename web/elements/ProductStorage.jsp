@@ -20,6 +20,7 @@
 
         <style>
         .stock-hero {
+            margin: 20px ;
             background: linear-gradient(135deg, #0f172a, #1e293b);
             border-radius: 18px;
             padding: 28px;
@@ -110,7 +111,7 @@
         .filter-row input {
             border-radius: 12px;
             border: 1px solid rgba(226, 232, 240, 0.8);
-            padding: 10px 14px;
+            padding: 10px 14px 10px 40px;
             }
             
         .status-filter {

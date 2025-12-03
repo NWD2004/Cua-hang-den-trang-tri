@@ -314,6 +314,23 @@
             <h2>Gửi Tin Nhắn Cho Chúng Tôi</h2>
             <p>Điền thông tin để nhận tư vấn thiết kế ánh sáng miễn phí trong 30 phút!</p>
 
+            <% 
+                String success = (String) request.getAttribute("success");
+                String error = (String) request.getAttribute("error");
+            %>
+            
+            <% if (success != null) { %>
+            <div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #c3e6cb;">
+                <i class="fas fa-check-circle"></i> <%= success %>
+            </div>
+            <% } %>
+            
+            <% if (error != null) { %>
+            <div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #f5c6cb;">
+                <i class="fas fa-exclamation-circle"></i> <%= error %>
+            </div>
+            <% } %>
+
             <form action="${pageContext.request.contextPath}/contact" method="post">
                 <div class="form-row">
                     <div class="form-group">

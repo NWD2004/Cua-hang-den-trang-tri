@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="Model.NguoiDung"%>
-
+<head>
+    <link rel="icon" type="image/svg+xml" href="${pageContext.request.contextPath}/assets/images/favicon.svg">
 <%
     NguoiDung currentUser = null;
     String userName = "Admin";
@@ -27,7 +28,7 @@
         }
     }
 %>
-
+</head>
 <header class="admin-topbar">
     <button class="topbar-btn" id="sidebarToggle" aria-label="Đóng/Mở menu">
         <i class="fas fa-bars"></i>
@@ -76,11 +77,13 @@
     align-items: center;
     padding: 0 24px;
     z-index: 900;
-    transition: left 0.25s ease;
+    transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: calc(100% - var(--sidebar-width, 250px));
 }
 
 body.sidebar-collapsed .admin-topbar {
-    left: 0;
+    left: 0 !important;
+    width: 100% !important;
 }
 
 .topbar-btn {

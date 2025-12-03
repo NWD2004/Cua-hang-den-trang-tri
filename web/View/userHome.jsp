@@ -524,7 +524,7 @@
 
 <script>
     function viewProduct(maDen) {
-        window.location.href = '${pageContext.request.contextPath}/ItemDetailServlet?maDen=' + maDen;
+        window.location.href = '${pageContext.request.contextPath}/product-detail?id=' + maDen;
     }
     
     function addToCart(maDen, quantity) {

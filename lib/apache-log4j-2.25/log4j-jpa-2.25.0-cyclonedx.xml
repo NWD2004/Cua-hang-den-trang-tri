@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom serialNumber="urn:uuid:2abc766a-48c3-30b0-94ab-6cdd655cb48a" version="1" xmlns="http://cyclonedx.org/schema/bom/1.6">
+  <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
+    <tools>
+      <components>
+        <component type="library">
+          <author>OWASP Foundation</author>
+          <group>org.cyclonedx</group>
+          <name>cyclonedx-maven-plugin</name>
+          <version>2.9.1</version>
+          <description>CycloneDX Maven plugin</description>
+          <hashes>
+            <hash alg="MD5">9c7a565cf28cce58557d0c621c5ea4b1</hash>
+            <hash alg="SHA-1">be882d5a22050bfa9d19090b1420c188617d0e1c</hash>
+            <hash alg="SHA-256">698e0f37184a5b28c245c4065fd036dfce253b52f82fbb7113d81d36326cc249</hash>
+            <hash alg="SHA-512">c0f0b11026858166f872a2eb54719492e5cecaa0bc9cd6b30b3ecb4a174eed220f4a1b5829d18d6734128e778d3cb3db7ffed177c92866133129cb29081814a0</hash>
+            <hash alg="SHA-384">d80964707dfe5caca8c70521d5066f57589304c0a657e6fbc7c0614ea0fc7b3b3dbe7778361eee0f54ba111e9cb0ffcb</hash>
+            <hash alg="SHA3-384">80bc3a275d9514bc457461ff52a72add8c7ecbbc01d8912efce57139016c544ee776981851be0a58fa977ab4221f703f</hash>
+            <hash alg="SHA3-256">142317d6f245390f4fd2d0c100b16281b8dfc5c0c2cff86943bdcc97039cb699</hash>
+            <hash alg="SHA3-512">af0fb9137c90b65d1a07f72e4d51ae509956cdb8800f35c961b037cdda1fe4a14ce3b496cef71ba85f1621affcfe29cd42704ae4191ff0b090a9602087c8997b</hash>
+          </hashes>
+        </component>
+      </components>
+    </tools>
+    <component type="library" bom-ref="pkg:maven/org.apache.logging.log4j/log4j-jpa@2.25.0?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.logging.log4j</group>
+      <name>log4j-jpa</name>
+      <version>2.25.0</version>
+      <description>Apache Log4j Java Persistence API Appender.</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.logging.log4j/log4j-jpa@2.25.0?type=jar</purl>
+      <externalReferences>
+        <reference type="vulnerability-assertion">
+          <url>https://logging.apache.org/cyclonedx/vdr.xml</url>
+        </reference>
+        <reference type="website">
+          <url>https://logging.apache.org/log4j/2.x/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://github.com/apache/logging-log4j2/actions</url>
+        </reference>
+        <reference type="distribution">
+          <url>https://logging.apache.org/log4j/2.x/download.html</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/apache/logging-log4j2/issues</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://lists.apache.org/list.html?log4j-user@logging.apache.org</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/apache/logging-log4j2</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <properties>
+      <property name="maven.goal">makeBom</property>
+      <property name="maven.scopes">compile,provided,runtime,system</property>
+      <property name="cdx:reproducible">enabled</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:maven/javax.persistence/javax.persistence-api@2.2?type=jar">
+      <group>javax.persistence</group>
+      <name>javax.persistence-api</name>
+      <version>2.2</version>
+      <description>Java(TM) Persistence API</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">e6520b3435f5b6d58eee415b5542abf8</hash>
+        <hash alg="SHA-1">25665ac8c0b62f50e6488173233239120fc52c96</hash>
+        <hash alg="SHA-256">5578b71b37999a5eaed3fea0d14aa61c60c6ec6328256f2b63472f336318baf4</hash>
+        <hash alg="SHA-512">013e4e0efe64b1cf6744dce44ed716b4d8513b2ad5b6a0131af663b7918eb65705bd09d4df763ff4a810829f4f6b6c198ca7670ce439940be57aed0914b513f8</hash>
+        <hash alg="SHA-384">bebee3b24091dd9aa6f60ce80a28d8b02bcac7057d90b7aa1d32fda80b4221f5e88292c9b0164e987381a90593955148</hash>
+        <hash alg="SHA3-384">c97e99f9e46b944f3546f0dd31db9a4ac07e59dfde1306849b1dc5e97ef36a5fe2de2f1adb0f2bb9fc20c6efa81ccf6a</hash>
+        <hash alg="SHA3-256">5df8881b9e2666ff15ecd36e3f2c56cc75ff90c30e8d1417b2709c5588f0186f</hash>
+        <hash alg="SHA3-512">1255e5ee88a7593fceaf6cde5d37cff795af1d1c2f0fa459926a85b213ca9713c75acb919367a389743c45edc27af3a5ec27fbc66ac09a46d1e4165a04447a48</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>EPL-1.0</id>
+        </license>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/javax.persistence/javax.persistence-api@2.2?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/javaee/jpa-spec</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.java.net/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/javaee/jpa-spec/issues</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://javaee.groups.io/g/jpa-spec/topics</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/javaee/jpa-spec.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.logging.log4j/log4j-core@2.25.0?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.logging.log4j</group>
+      <name>log4j-core</name>
+      <version>2.25.0</version>
+      <description>A versatile, industrial-grade, and reference implementation of the Log4j API.
+    It bundles a rich set of components to assist various use cases:
+    Appenders targeting files, network sockets, databases, SMTP servers;
+    Layouts that can render CSV, HTML, JSON, Syslog, etc. formatted outputs;
+    Filters that can be configured using log event rates, regular expressions, scripts, time, etc.
+    It contains several extension points to introduce custom components, if needed.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">91208e5de00a69d02a3bac39470707b1</hash>
+        <hash alg="SHA-1">2fe857a3f68108eb7f1d9e88b91eca0a952a75d6</hash>
+        <hash alg="SHA-256">05d3eecb9e509fd47117c0fb43c7b4b2989b28ecd5543ad5feff2e4903d3c921</hash>
+        <hash alg="SHA-512">57eca2f75e18cd8b55cb17be81a9adc4eb6ebbcb116fa1f6587033262b4c6af4d8e6ec27d98b6b7cc7c9130c569404f04b51f0afa0ec25a5b71e2731c4941dd2</hash>
+        <hash alg="SHA-384">b8cb1451fb5741779ea9b0dc0fdeb7f4f17b31edb777060de9bdd9bfcd406ce6317ae21ca781a9fef2f6cd77a3cd97be</hash>
+        <hash alg="SHA3-384">c72b386bc09eb8d53d8c1fe1cceaa2a6536e7b95369aaf733589a677d28392426a652cc25418b9340c4426b9ddedf825</hash>
+        <hash alg="SHA3-256">71c6863f8d4fae211108236d712b26c7e98f5ecd13a0d41ecdbae3adcc706dcf</hash>
+        <hash alg="SHA3-512">2551a998349859291fe8f6057db38f3d7b61ad2c1250e438579667dca8d6a1754e2b734f3cf7056624e89d94d6ddbd37e01db29590e054c67ca2d6f785da5694</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.logging.log4j/log4j-core@2.25.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://logging.apache.org/log4j/2.x/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://github.com/apache/logging-log4j2/actions</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/apache/logging-log4j2/issues</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://lists.apache.org/list.html?log4j-user@logging.apache.org</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/apache/logging-log4j2</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.logging.log4j/log4j-api@2.25.0?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.logging.log4j</group>
+      <name>log4j-api</name>
+      <version>2.25.0</version>
+      <description>The logging API of the Log4j project.
+    Library and application code can log through this API.
+    It contains a simple built-in implementation (`SimpleLogger`) for trivial use cases.
+    Production applications are recommended to use Log4j API in combination with a fully-fledged implementation, such as Log4j Core.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">e41902fc49a685989853ccd12e47a88e</hash>
+        <hash alg="SHA-1">da64d32ee42b8d7760fc6ca8ba72042096ffbc28</hash>
+        <hash alg="SHA-256">0393e32167240eb56597a2016446928755729f1a181046cab5d42a81d0e3d909</hash>
+        <hash alg="SHA-512">9e0c7bfd1d5e2de4d42635ab1ef1778117b65ae657ca8dbbbe0812f8be0c8829016624df1d3b03b977c381c2f48368a879a55b7ab8e6249b3215db94a4492f1d</hash>
+        <hash alg="SHA-384">82bf5caca1d7f64f6b97241409f800eac13a5065bcf5bda35ccfa2782e3bd8ba7ba1e51a453d7be565cfb4116bbed0b3</hash>
+        <hash alg="SHA3-384">388c98c6c44ab154c7deb3d986ccf706eebf332e23a6619df0aa783fbf939d3d9682c03ee8810a8a98353b200cfe32ff</hash>
+        <hash alg="SHA3-256">db40803fec0c598caae3772ee520718e7d44dfedf34b204c72b883e368214862</hash>
+        <hash alg="SHA3-512">3b2db30422c2ce0510962ca00c1361ebc7c6158caae68aa93c2fae2a89af554975dff64a7f2763cf80f0d32caf27a388e8e1b2bcc24b798cb63f79d3d36ce426</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.logging.log4j/log4j-api@2.25.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://logging.apache.org/log4j/2.x/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://github.com/apache/logging-log4j2/actions</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/apache/logging-log4j2/issues</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://lists.apache.org/list.html?log4j-user@logging.apache.org</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/apache/logging-log4j2</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.19.0?type=jar">
+      <publisher>FasterXML</publisher>
+      <group>com.fasterxml.jackson.core</group>
+      <name>jackson-core</name>
+      <version>2.19.0</version>
+      <description>Core Jackson processing abstractions (aka Streaming API), implementation for JSON</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">d741d9cff5a56cb6f1307abe947fb7c1</hash>
+        <hash alg="SHA-1">a90640e59ea42632a8e331ff1d6b706cf306050a</hash>
+        <hash alg="SHA-256">da8e859bac94874528116a25f20c68560e4287acbf27628711b8a4f96b028430</hash>
+        <hash alg="SHA-512">2528a8239e19956a67907a7f99db62a85c745535f67e393a7b323123c6488c9c8e7a083804aee9a4c0317d5eeba0b0990545f697b0a38bc0a60286c77caee556</hash>
+        <hash alg="SHA-384">251fec00db21cb056876b49152105a04a27a494ba46ecdfe10427fb9a4b8cd69387c9a6b0057953d74745db853ae1db9</hash>
+        <hash alg="SHA3-384">ca2dc9a3e73af60771559a9f94d936c1cd84f7deff6f2d797f6bda873d6fa87bf48a2e9a44d5909365c94d9cf304d5f5</hash>
+        <hash alg="SHA3-256">a75de4256551184e3920c457202526cd8b64cbed36e38a4eda6d37a11854aec2</hash>
+        <hash alg="SHA3-512">1737c56a27ee88b1017c8a4e5c583171f1d7f4bbc1cef5d462dd9bef78b82f2efdd564ab17ca59f6f0bd2b845a5357ad281818c73a747eba5091154fc4d57d54</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-core@2.19.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/FasterXML/jackson-core</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/FasterXML/jackson-core/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/FasterXML/jackson-core</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.19.0?type=jar">
+      <publisher>FasterXML</publisher>
+      <group>com.fasterxml.jackson.core</group>
+      <name>jackson-databind</name>
+      <version>2.19.0</version>
+      <description>General data-binding functionality for Jackson: works on core streaming API</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">0bf98314940eeb0cd056277e4bd377b5</hash>
+        <hash alg="SHA-1">b3f7506f6414fb04760561eec11a0880165c2a4a</hash>
+        <hash alg="SHA-256">ceda311f476c3b18e1d2b240c94e2dcb9c8d44e70f8afa9facab88bac4ddc03a</hash>
+        <hash alg="SHA-512">0e9229bd8641ae2297700b8997ca4a26dae50d8e3dfe89c84301112304484ca6551b5d578e5a7d23945d314cb31e84383a821b974be75484efadd301c89bb738</hash>
+        <hash alg="SHA-384">8dd4d4f8983abeadcdbf9700ca462cd04b31f5ee65d5a551a769ab2e1bdcecf9a25476cc84b776ee5a4f3c6a1b958dd8</hash>
+        <hash alg="SHA3-384">3ad31f3fdf96f6c1a337057084d8d3f7f06c30d8c067055f3a4d8ccc9742587417d96b1f1e2370b8ee55f61853273963</hash>
+        <hash alg="SHA3-256">53a458a0f6910b1cbec8c4e74302b8a8e24a92212f4df812ea9712b065b2bf44</hash>
+        <hash alg="SHA3-512">62c83edf90a68c3c9c54995a895a16c24d5d9edfe01ddf34e4612532c528f5e0e046d3589331dcbecc259b08a41b64ef0a24c3f3e09e4eab5ed6725fe44568f9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.19.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/FasterXML/jackson</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/FasterXML/jackson-databind/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/FasterXML/jackson-databind</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.19.0?type=jar">
+      <publisher>FasterXML</publisher>
+      <group>com.fasterxml.jackson.core</group>
+      <name>jackson-annotations</name>
+      <version>2.19.0</version>
+      <description>Core annotations used for value types, used by Jackson data binding package.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">59c24289bcb30ba31ef04c2cc0ff000d</hash>
+        <hash alg="SHA-1">fd1e7c56de1e5b658563c8c66d5074cceb4e3a0b</hash>
+        <hash alg="SHA-256">ead60e9cac0e42b57092b9e2d087ff43536e9477d4486ba393037a8cc156cda7</hash>
+        <hash alg="SHA-512">ca3b4c2e46e60aeee041e03879381819edd2d9309eda545caffeb99fff9506c83c42d6f578920661d2a2eca6a7d9aa7c13f7d850b7b697b1125b6ba37da9de97</hash>
+        <hash alg="SHA-384">fc0eea9870c458aca7d8c8e591094915606b62cfe59dd41b9043b4fff9856570dd5f96ec022b0497f5cd9b84d1e71b98</hash>
+        <hash alg="SHA3-384">a21c01c8925a0dab61ffa273f639cfa5eda806778ee646ed7a8279a456412a70a0ecd47fbb31faae3e10b17c0410aa8c</hash>
+        <hash alg="SHA3-256">36d2935f972151d7a9c192fe304ffcab98169b77bef85342073b5219d2497fb1</hash>
+        <hash alg="SHA3-512">91c30ac2087cd1995fec4283fa394d9d56d2a5fdbc74740432dcf65e74cab1857c7f7affaf2e1a799440c6ebd885f16cdeb89f9ef6f8fbfc37de115bd51f036e</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.19.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/FasterXML/jackson</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/FasterXML/jackson-annotations/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/FasterXML/jackson-annotations</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/biz.aQute.bnd/biz.aQute.bnd.annotation@7.1.0?type=jar">
+      <publisher>Bndtools</publisher>
+      <group>biz.aQute.bnd</group>
+      <name>biz.aQute.bnd.annotation</name>
+      <version>7.1.0</version>
+      <description>bnd Annotations Library</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">664c398da304527f42ab13a0f8036025</hash>
+        <hash alg="SHA-1">2f2be18c936d08cf46ea6cfa0043f34afdf38705</hash>
+        <hash alg="SHA-256">f69c2de3a695c113d125ac8053c92a680a3ce9d02ea25845095cf2d4626a7663</hash>
+        <hash alg="SHA-512">b29e68403ff0b0cd0efacf23a466390b922ef464f79b49c25518864839a1cd86329ace0a7214c6f0ce99056019d857301994bbb71dea0c35dd94511edd789ca4</hash>
+        <hash alg="SHA-384">71a5290b7cde52d3cae668492cfb368c6955a176dd7442a93e0f26f2258806c56b45869436ad9f336ad3f7a316b45838</hash>
+        <hash alg="SHA3-384">84c2757373413bfaedba04dc84329bf01b26c02a417d87674842f147a05e4001ed154efecc0f43d4473b8a7ba5175296</hash>
+        <hash alg="SHA3-256">f3cd557e7b9b6f8996ea1006cce7d4b007fbd3b1fc27b62dacdece5e38988d9e</hash>
+        <hash alg="SHA3-512">2059f5cb86d9d1b71479d2217107584fb0ff880f064a2cae0dd916d840e660314aaa746d4e6451c15ae56a500bc4e18191b40662ee4eda52aa3b0c33ea82c94b</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>(Apache-2.0 OR EPL-2.0)</name>
+          <url>https://opensource.org/licenses/Apache-2.0,https://opensource.org/licenses/EPL-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/biz.aQute.bnd/biz.aQute.bnd.annotation@7.1.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://bnd.bndtools.org/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/bndtools/bnd</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.osgi/org.osgi.resource@1.0.0?type=jar">
+      <publisher>OSGi Alliance</publisher>
+      <group>org.osgi</group>
+      <name>org.osgi.resource</name>
+      <version>1.0.0</version>
+      <description>OSGi Companion Code for org.osgi.resource Version 1.0.0.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">7d857a4203e2996fab0cf070133e43df</hash>
+        <hash alg="SHA-1">343c88949132984b3f2d4175a72c40b77dc65619</hash>
+        <hash alg="SHA-256">81fc50f1f1d38a4af28e131907d4afe213249aab05060484edca0e60c4af9b4a</hash>
+        <hash alg="SHA-512">4e798790856f83f50832db80bfab64dfceeff1c509d7dde43e74a9f9192ea7a7d5ea77b9b1e81291fa6ba3dcef5ab8fa791ca8093a72a08d7ca6f6499e13e506</hash>
+        <hash alg="SHA-384">73038c395166552b64b6b5469bd8056584f48d19b5762df2e8bd2770405ed8f6071e397a87d9a7ed39f8c2e0e8ab85b2</hash>
+        <hash alg="SHA3-384">e06c8a460b3bf06d6cb22237aeffa6afd2eadd9461096c67b768a14603ad8aaa88f891d03cf0a273a99d86906c1c8eb3</hash>
+        <hash alg="SHA3-256">1097cfd20e80ce368fd828a23ad7c32a202cebd92106f6ebb88ba55ca74349ee</hash>
+        <hash alg="SHA3-512">d7b710e1e0484badb875f326c602c90df6705df48b0f057320919a5255d3ecbddd7053eabc68787480a70aebd7e553e9f51728112e1fa0846c849366b7e8d69b</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.osgi/org.osgi.resource@1.0.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.osgi.org/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://osgi.org/git/build.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.osgi/org.osgi.service.serviceloader@1.0.0?type=jar">
+      <publisher>OSGi Alliance</publisher>
+      <group>org.osgi</group>
+      <name>org.osgi.service.serviceloader</name>
+      <version>1.0.0</version>
+      <description>OSGi Companion Code for org.osgi.service.serviceloader Version 1.0.0.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">4943f0102a6d893c4dd77f369a5f0537</hash>
+        <hash alg="SHA-1">3728ff37909c6a3c1870b3e851342d9f2bd3cc63</hash>
+        <hash alg="SHA-256">8f876ce2a9aa4e95b1f1952950255103e2487425050a654f3285447ba601c154</hash>
+        <hash alg="SHA-512">a7def4cb7a8ed992645faa80a780e0b30bd39c1587b5bcb65fe170d10842d0d880c2849edd50c64807fe0e4b9cc0051337d1b161d0d390465d9e63a762861c49</hash>
+        <hash alg="SHA-384">1e480694b8a541da4cd1e044d3f3ea3cd55152515ac022b80d865b6654242506c2138daabb4e71c30d36b12b9aaf676d</hash>
+        <hash alg="SHA3-384">7f076af200ae9c2bd9f235b949aee01a1a758c8aac10fee8b98ec2497197d2029117d5627eb0eabd9b42979eb1baa009</hash>
+        <hash alg="SHA3-256">83b1dce69c4c899176eb6e368e434ecb77dfed7c436530b8c5d08b9b6f2430aa</hash>
+        <hash alg="SHA3-512">5debde53a7ead231dcd907467d59728f59cae4eb3b967c19808f78890bd97d2f04657cad9c093e88f9818338b0b3b38a57c66400ebcff61fbb26d18e9f7bf8ed</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.osgi/org.osgi.service.serviceloader@1.0.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.osgi.org/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://osgi.org/git/build.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.google.errorprone/error_prone_annotations@2.37.0?type=jar">
+      <publisher>Google LLC</publisher>
+      <group>com.google.errorprone</group>
+      <name>error_prone_annotations</name>
+      <version>2.37.0</version>
+      <description>Error Prone is a static analysis tool for Java that catches common programming mistakes at compile-time.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">dce0a1c83d3dc06c2715c96e11d2c429</hash>
+        <hash alg="SHA-1">8512660d1269d166fad497f51de35da61447f063</hash>
+        <hash alg="SHA-256">d29a6263b48d46d4c7c28b64717a6d105b3e2a3e64256092f845e8e774fca6ba</hash>
+        <hash alg="SHA-512">fc44571f9095764c3ba1a5372a2603aa7bc8557578bd11d6ceff70a237e7af5d55578706bf8413cb203573fea69199e208c527f5d4c8b171284c7b229324ed13</hash>
+        <hash alg="SHA-384">fe53d02fbaa8bd20d225717b2b859df085487f4f3a84c5207308a77ab7593772194762b897ded223288805b948bdc7dc</hash>
+        <hash alg="SHA3-384">dc0d42f714fe4b93f25160444f74fdb0ceab92bc01de68e413c069122aebc22cdfd70ab15138f881c6312b083681def7</hash>
+        <hash alg="SHA3-256">9b1e2555cc8b66ab2d1dda37192574212f5b57347739edc74410322025e72299</hash>
+        <hash alg="SHA3-512">b42c3e648b8db5796fa055e5ebf4735ef830c26d37696c69c69fffdab2c0c7199e5c139231a268732f4b11d6a790bba32cec3a8b42134d7d34d36062c57f38b2</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.google.errorprone/error_prone_annotations@2.37.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://errorprone.info/error_prone_annotations</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/google/error-prone/error_prone_annotations</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.osgi/org.osgi.annotation.bundle@2.0.0?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.osgi</group>
+      <name>org.osgi.annotation.bundle</name>
+      <version>2.0.0</version>
+      <description>OSGi Companion Code for org.osgi.annotation.bundle Version 2.0.0</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">19115314a0ce4cfb711a811dcc0be0a3</hash>
+        <hash alg="SHA-1">f5c2cd6e670c3c5d440d3003efd5ef2ead5c68eb</hash>
+        <hash alg="SHA-256">b9c9546ec5be3ebc2e85ba4919150ad76d64594805282fc895133a47d264a7ae</hash>
+        <hash alg="SHA-512">f16b8983240ba3c08d6bc78e2eae92e89eb528f32a705961d90b463def0a5ed1ba08cc3d0be38b5dcfb946c6f759df772e122fb769e58e8c20aa79a489a1fd21</hash>
+        <hash alg="SHA-384">88217b7d3a2d9a0a3f005162b95d68ba2bd29629688b2c32e93e4587d89fe6bd468f5c62ef422ebf2b609d402e62ff56</hash>
+        <hash alg="SHA3-384">c7ee64dd3e235d900d01d8629b82245303d34a006e1edcd2571ef736d9c6256dcb718be326ad4909cb6d2cea26118ea9</hash>
+        <hash alg="SHA3-256">9adcacb036caf30d17a13fcd5952a35e011678b1dbfabafdff73dba065ace8a3</hash>
+        <hash alg="SHA3-512">76bec6bb2cdbc8da043760a7aedd51203c8d70b740c9b8de0ba6b0cf9ad991a58059566e7f62dee30606f32d267b2596d5bd5e885c73e336ae7fff6cf7f970db</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.osgi/org.osgi.annotation.bundle@2.0.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://docs.osgi.org/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/osgi/osgi</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.osgi/org.osgi.annotation.versioning@1.1.2?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.osgi</group>
+      <name>org.osgi.annotation.versioning</name>
+      <version>1.1.2</version>
+      <description>OSGi Companion Code for org.osgi.annotation.versioning Version 1.1.2</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">a61b3b8d09c85ad296c61e21bf77ec70</hash>
+        <hash alg="SHA-1">dc3cd4ec96c0b3c5459fe00694bd73a816ecf93e</hash>
+        <hash alg="SHA-256">f51f235e80df8ffbc30ef1b557b6ea38a696632d675404ec117e952978b8b863</hash>
+        <hash alg="SHA-512">a4c612bec624a168f25f0923d51925bbc914686673eeebd5b2442998b876f05855e2b0a6e6e9aca4a6533ed3156b0d24f94c3e508ee9778e1b2e469be318afa3</hash>
+        <hash alg="SHA-384">68a2046f083a2e77304622a56d07c0e73ba88534af4a87b5428cebf8b638c40ce21bbac089a8b5520ad488c946b633ea</hash>
+        <hash alg="SHA3-384">930734f6979650191d51cd8bf1f9ab4548d307950735aa98e2dbda7aecc19b49d01a3b968824f6df2ffafce65e122c60</hash>
+        <hash alg="SHA3-256">513392d0e8ddd873d04c5cf4f402a9cfe094413832bb859fe37b70fd0512dd12</hash>
+        <hash alg="SHA3-512">3d2bd7d2eb784a9fab4b09c42adb0722363079235340f1915bb82a99f1c5e616ee8f3dc34d2c90b941d2651dcb4f393c7fea3e23b579456a696604148d10f22b</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.osgi/org.osgi.annotation.versioning@1.1.2?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://docs.osgi.org/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/osgi/osgi</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.github.spotbugs/spotbugs-annotations@4.9.3?type=jar">
+      <group>com.github.spotbugs</group>
+      <name>spotbugs-annotations</name>
+      <version>4.9.3</version>
+      <description>Annotations the SpotBugs tool supports</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">6149845e438bd5a34ebaf81f8bc9e243</hash>
+        <hash alg="SHA-1">4d362bffcfdfd734999e94d7d98fde678aae71cf</hash>
+        <hash alg="SHA-256">13532bfe2f45fcd491432221df72d9cd0efb8f987c9245e12befa192c8925ce3</hash>
+        <hash alg="SHA-512">78a74a014eafff94b16fdba52eac7e8a689cada2ef14d0c230412b904231d576cae49571aec95ea7ab9fb10d0defbc8b356007180320fcbc8b3635bd4b3be0b0</hash>
+        <hash alg="SHA-384">1cba6d4013aaad6bf620fb76b7eee278964771cee1d9b849ce5643728cdb75689a4e45c2278892f4379cb9c05d847ecc</hash>
+        <hash alg="SHA3-384">3cf6d8d62cab5806a08291b8459f480879bec229935f538dff421566fde135a617bf6d3629f4ca2a183068f4e8923c7d</hash>
+        <hash alg="SHA3-256">86fad9ff61ee413170b0368320c0a8cfab3e260ea054564b80ded970657876c3</hash>
+        <hash alg="SHA3-512">0ceaddd802f486761a9fd11754f2adf3c8aac48289fc98a042b742131c7c6efb8f08771d6b169e3b6fdafb8e7a09882bc0f759a3c849d4dff919e0b7e8e33eab</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>LGPL-2.1-only</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.github.spotbugs/spotbugs-annotations@4.9.3?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://spotbugs.github.io/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/spotbugs/spotbugs/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar">
+      <group>com.google.code.findbugs</group>
+      <name>jsr305</name>
+      <version>3.0.2</version>
+      <description>JSR305 Annotations for Findbugs</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">dd83accb899363c32b07d7a1b2e4ce40</hash>
+        <hash alg="SHA-1">25ea2e8b0c338a877313bd4672d3fe056ea78f0d</hash>
+        <hash alg="SHA-256">766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7</hash>
+        <hash alg="SHA-512">bb09db62919a50fa5b55906013be6ca4fc7acb2e87455fac5eaf9ede2e41ce8bbafc0e5a385a561264ea4cd71bbbd3ef5a45e02d63277a201d06a0ae1636f804</hash>
+        <hash alg="SHA-384">ca0b169d3eb2d0922dc031133a021f861a043bb3e405a88728215fd6ff00fa52fdc7347842dcc2031472e3726164bdc4</hash>
+        <hash alg="SHA3-384">9903fd7505218999f8262efedb3d935d64bcef84aae781064ab5e1b24755466b269517cada562fa140cd1d417ede57a1</hash>
+        <hash alg="SHA3-256">223fda9a89a461afaae73b177a2dc20ed4a90f2f8757f5c65f3241b0510f00ff</hash>
+        <hash alg="SHA3-512">3996b5af57a5d5c6a0cd62b11773360fb051dd86a2ba968476806a2a5d32049b82d69a24a3c694e8fe4d735be6a28e41000cc500cc2a9fb577e058045855d2d6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://findbugs.sourceforge.net/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://code.google.com/p/jsr-305/</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:maven/org.apache.logging.log4j/log4j-jpa@2.25.0?type=jar">
+      <dependency ref="pkg:maven/javax.persistence/javax.persistence-api@2.2?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.logging.log4j/log4j-core@2.25.0?type=jar"/>
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.19.0?type=jar"/>
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.19.0?type=jar"/>
+      <dependency ref="pkg:maven/biz.aQute.bnd/biz.aQute.bnd.annotation@7.1.0?type=jar"/>
+      <dependency ref="pkg:maven/com.google.errorprone/error_prone_annotations@2.37.0?type=jar"/>
+      <dependency ref="pkg:maven/org.osgi/org.osgi.annotation.bundle@2.0.0?type=jar"/>
+      <dependency ref="pkg:maven/org.osgi/org.osgi.annotation.versioning@1.1.2?type=jar"/>
+      <dependency ref="pkg:maven/com.github.spotbugs/spotbugs-annotations@4.9.3?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/javax.persistence/javax.persistence-api@2.2?type=jar"/>
+    <dependency ref="pkg:maven/org.apache.logging.log4j/log4j-core@2.25.0?type=jar">
+      <dependency ref="pkg:maven/org.apache.logging.log4j/log4j-api@2.25.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.logging.log4j/log4j-api@2.25.0?type=jar"/>
+    <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.19.0?type=jar"/>
+    <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.19.0?type=jar">
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.19.0?type=jar"/>
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.19.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.19.0?type=jar"/>
+    <dependency ref="pkg:maven/biz.aQute.bnd/biz.aQute.bnd.annotation@7.1.0?type=jar">
+      <dependency ref="pkg:maven/org.osgi/org.osgi.resource@1.0.0?type=jar"/>
+      <dependency ref="pkg:maven/org.osgi/org.osgi.service.serviceloader@1.0.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.osgi/org.osgi.resource@1.0.0?type=jar"/>
+    <dependency ref="pkg:maven/org.osgi/org.osgi.service.serviceloader@1.0.0?type=jar"/>
+    <dependency ref="pkg:maven/com.google.errorprone/error_prone_annotations@2.37.0?type=jar"/>
+    <dependency ref="pkg:maven/org.osgi/org.osgi.annotation.bundle@2.0.0?type=jar">
+      <dependency ref="pkg:maven/org.osgi/org.osgi.annotation.versioning@1.1.2?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.osgi/org.osgi.annotation.versioning@1.1.2?type=jar"/>
+    <dependency ref="pkg:maven/com.github.spotbugs/spotbugs-annotations@4.9.3?type=jar">
+      <dependency ref="pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar"/>
+  </dependencies>
+</bom>

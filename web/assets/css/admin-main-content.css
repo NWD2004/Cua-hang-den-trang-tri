@@ -2,18 +2,21 @@
 
 /* Main Layout */
 .pc-container {
-    margin-left: 220px;
+    margin-left: 250px;
     margin-top: 60px;
     padding: 25px;
     min-height: calc(100vh - 60px);
-    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     background: #f8f9fa;
+    width: calc(100% - 250px);
 }
 
-/* Sidebar hidden state */
-body.sidebar-hidden .pc-container {
-    margin-left: 0;
-    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+/* Sidebar hidden/collapsed state */
+body.sidebar-hidden .pc-container,
+body.sidebar-collapsed .pc-container {
+    margin-left: 0 !important;
+    width: 100% !important;
+    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Compact layout adjustments */
@@ -326,7 +329,13 @@ body.sidebar-transitioning .pc-container > * {
 /* Responsive */
 @media (max-width: 1024px) {
     .pc-container {
-        margin-left: 0;
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    
+    .admin-topbar {
+        left: 0 !important;
+        width: 100% !important;
     }
     
     .content-grid {
@@ -339,9 +348,11 @@ body.sidebar-transitioning .pc-container > * {
         text-align: center;
     }
 
-    /* Override sidebar hidden state on mobile */
-    body.sidebar-hidden .pc-container {
-        margin-left: 0;
+    /* Override sidebar hidden/collapsed state on mobile */
+    body.sidebar-hidden .pc-container,
+    body.sidebar-collapsed .pc-container {
+        margin-left: 0 !important;
+        width: 100% !important;
     }
 }
 
@@ -1418,34 +1429,35 @@ body.sidebar-transitioning .pc-header {
 /* ===== S
 IDEBAR TOGGLE FUNCTIONALITY ===== */
 
-/* Hide sidebar when sidebar-hidden class is added */
-body.sidebar-hidden .pc-sidebar,
-.pc-sidebar.sidebar-hidden {
+/* Hide sidebar when sidebar-hidden/collapsed class is added */
+body.sidebar-hidden .admin-sidebar,
+body.sidebar-collapsed .admin-sidebar,
+.admin-sidebar.sidebar-hidden,
+.admin-sidebar.sidebar-collapsed {
     transform: translateX(-100%) !important;
     visibility: hidden;
 }
 
-/* Adjust main content when sidebar is hidden */
-body.sidebar-hidden .pc-container {
+/* Adjust main content when sidebar is hidden/collapsed */
+body.sidebar-hidden .pc-container,
+body.sidebar-collapsed .pc-container {
     margin-left: 0 !important;
 }
 
+body.sidebar-hidden .admin-topbar,
 body.sidebar-hidden .admin-header,
-body.sidebar-hidden .pc-header {
+body.sidebar-hidden .pc-header,
+body.sidebar-collapsed .admin-topbar,
+body.sidebar-collapsed .admin-header,
+body.sidebar-collapsed .pc-header {
     left: 0 !important;
+    width: 100% !important;
 }
 
 /* Sidebar transition */
-.pc-sidebar {
+.admin-sidebar {
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
                 visibility 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* Smooth transition for main content and header */
-.pc-container,
-.admin-header {
-    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
-                left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Sidebar transitioning state */

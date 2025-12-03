@@ -108,6 +108,20 @@ public class UserProductDetailServlet extends HttpServlet {
             List<Den> relatedProducts = denDAO.searchAndFilter(null, product.getMaLoai(), null, null, "", 0, 4);
             relatedProducts.removeIf(p -> p.getMaDen() == maDen); // Loại bỏ sản phẩm hiện tại
             
+            // Lấy danh sách đánh giá
+            DanhGiaDAO danhGiaDAO = new DanhGiaDAO();
+            List<DanhGia> reviews = danhGiaDAO.getByProduct(maDen);
+            
+            // Tính điểm trung bình
+            double averageRating = 0;
+            if (!reviews.isEmpty()) {
+                int totalStars = 0;
+                for (DanhGia review : reviews) {
+                    totalStars += review.getSoSao();
+                }
+                averageRating = (double) totalStars / reviews.size();
+            }
+            
             // Set attributes
             request.setAttribute("product", product);
             request.setAttribute("category", category);
@@ -116,6 +130,8 @@ public class UserProductDetailServlet extends HttpServlet {
             request.setAttribute("sizes", sizes);
             request.setAttribute("variantStock", variantStock);
             request.setAttribute("relatedProducts", relatedProducts);
+            request.setAttribute("reviews", reviews);
+            request.setAttribute("averageRating", averageRating);
             
             // Forward to JSP
             request.getRequestDispatcher("/elements/UserProductDetail.jsp").forward(request, response);

@@ -11,6 +11,31 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/web/elements/AccountInfo.jsp</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/XoaLoaiServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/ThemLoaiServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/CheckoutServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/AddToCartServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/SuaLoaiServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/UserManagerServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/web/layouts/header-content-admin.jsp</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/AdminLoginServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/UserAccountServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/UpdateUserInfoServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/SuaKhoServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/MyOrderServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/ConfirmReceivedServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/AdminRegisterServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/web/elements/CategoryManagement.jsp</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/web/elements/OrderManagement.jsp</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/ChangePasswordServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/ThemKhoServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/web/layouts/sidebar-admin.html</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/XoaKhoServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/UpdateOrderStatusServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/UserRegisterServlet.java</file>
+            <file>file:/C:/Users/PC/Documents/GitHub/Cua-hang-den-trang-tri/src/java/Controller/AddReviewServlet.java</file>
+        </group>
     </open-files>
 </project-private>

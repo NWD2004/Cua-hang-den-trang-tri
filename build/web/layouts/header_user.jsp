@@ -51,6 +51,7 @@
 <head>
     <meta charset="UTF-8">
     <title>LightStore</title>
+    <link rel="icon" type="image/svg+xml" href="${pageContext.request.contextPath}/assets/images/favicon.svg">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -506,6 +507,7 @@
 
     <!-- Header -->
     <header>
+        
         <!-- Top bar chào mừng -->
         <div class="header-top">
             Chào mừng bạn đến với cửa hàng đèn trang trí LightStore - Nghệ thuật ánh sáng cho không gian sống!
@@ -618,7 +620,7 @@
                     <li><a href="${pageContext.request.contextPath}/View/userHome.jsp">Trang chủ</a></li>
                     <li><a href="${pageContext.request.contextPath}/elements/about.jsp">Giới thiệu</a></li>
                     <li><a href="${pageContext.request.contextPath}/elements/UserProduct.jsp">Sản phẩm</a></li>
-                    <li><a href="#">Bộ sưu tập</a></li>
+                    <!--     <li><a href="#">Bộ sưu tập</a></li>   -->
                     <li><a href="${pageContext.request.contextPath}/elements/news.jsp">Tin tức</a></li>
                     <li><a href="${pageContext.request.contextPath}/elements/contact.jsp">Liên hệ</a></li>
                 </ul>

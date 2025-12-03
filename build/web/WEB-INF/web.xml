@@ -5,6 +5,27 @@
          version="3.1">
     <display-name>WebCuaHangDen</display-name>
 
+    <context-param>
+        <param-name>mail.smtp.host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>mail.smtp.port</param-name>
+        <param-value>587</param-value>
+    </context-param>
+    <context-param>
+        <param-name>mail.smtp.username</param-name>
+        <param-value><!-- your-email@example.com --></param-value>
+    </context-param>
+    <context-param>
+        <param-name>mail.smtp.password</param-name>
+        <param-value><!-- app-password --></param-value>
+    </context-param>
+    <context-param>
+        <param-name>mail.from.name</param-name>
+        <param-value>LightStore Support</param-value>
+    </context-param>
+
     <welcome-file-list>
         <welcome-file>View/login.jsp</welcome-file>
     </welcome-file-list>

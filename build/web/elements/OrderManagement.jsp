@@ -174,6 +174,19 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
+        .btn-success {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-success:hover {
+            background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -312,11 +325,14 @@
                     </td>
                     <td>
                         <div class="action-buttons">
-                            <button class="btn-action btn-edit" onclick="showUpdateStatusModal(<%= order.getMaHd() %>, '<%= status.replace("'", "\\'") %>')">
+                            <button class="btn-action btn-edit" onclick="showUpdateStatusModal(<%= order.getMaHd() %>, '<%= status.replace("'", "\\'") %>')" title="Sửa trạng thái">
                                 <i class="fas fa-edit"></i>
                             </button>
-                            <a href="<%=request.getContextPath()%>/elements/OrderDetailAdmin.jsp?maHd=<%= order.getMaHd() %>" class="btn-action btn-view">
+                            <a href="<%=request.getContextPath()%>/elements/OrderDetailAdmin.jsp?maHd=<%= order.getMaHd() %>" class="btn-action btn-view" title="Xem chi tiết">
                                 <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="<%=request.getContextPath()%>/ExportSingleOrderExcelServlet?maHd=<%= order.getMaHd() %>" class="btn-action btn-success" title="Xuất Excel">
+                                <i class="fas fa-file-excel"></i>
                             </a>
                         </div>
                     </td>

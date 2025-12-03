@@ -75,7 +75,7 @@
         .filter-row select {
             border-radius: 12px;
             border: 1px solid rgba(226, 232, 240, 0.8);
-            padding: 10px 14px;
+            padding: 10px 14px 10px 40px;
         }
 
         .table-container .badge {
